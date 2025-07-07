@@ -12,6 +12,7 @@ import RentTracker from './components/Rent/RentTracker';
 import Profile from './components/Auth/Profile';
 import MaintenanceScheduling from './components/Maintenance/MaintenanceScheduling';
 import { motion } from 'framer-motion';
+import NotFound from './components/Dashboard/NotFound';
 
 function App() {
   const { user, loading } = useAuth();
@@ -50,6 +51,7 @@ function App() {
         <Route path="/landlord/history" element={<MaintenanceHistory />} />
         <Route path="/chat" element={<ChatWindow />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
